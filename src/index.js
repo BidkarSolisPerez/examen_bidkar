@@ -1,8 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import './axio';
+import Information from './information';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+class App extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            values : []
+        }
+    }
+
+
+
+    render(){
+        return(
+            <div>
+                <h1>Welcome react world!!</h1>
+                <Information />
+            </div>
+        );
+    }
+
+
+
+}
+
+
+ReactDOM.render(<App />,document.getElementById('root'))
